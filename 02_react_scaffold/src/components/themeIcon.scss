@@ -1,0 +1,40 @@
+// ThemeIcon.scss
+.icon-container {
+  position: relative;
+  width: 32px;
+  height: 32px;
+}
+
+.icon-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.fade-enter {
+  opacity: 0;
+  transform: translateY(-10px);
+}
+
+.fade-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: all 500ms ease-out;
+}
+
+.fade-exit {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.fade-exit-active {
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all 500ms ease-in;
+}
+
+.theme-icon {
+  will-change: transform, opacity;
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+}
