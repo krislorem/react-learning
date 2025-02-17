@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hello React</title>
+</head>
+
+<body>
+  <div id="root"></div>
+  <!-- CDN引入，依赖三个包：react、react-dom、babel -->
+  <script src="./lib/react.js"></script>
+  <script src="./lib/react-dom.js"></script>
+  <script src="./lib/babel.js"></script>
+
+  <script type="text/babel">
+    const root = ReactDOM.createRoot(document.querySelector("#root"))
+    let message = "Hello World"
+    let c = 0
+    const btnClick = () => {
+      message = "Hello React"
+      c = c + 1
+      rootRender()
+    }
+    const getRandomStyle = () => ({
+      color: `hsl(${Math.floor(Math.random() * 360)}, 100%, 50%)`
+    });
+
+    const rootRender = () => {
+      root.render(
+        <div>
+          <h2 style={getRandomStyle()}>{message}</h2>
+          <button onClick={btnClick}>修改文本</button>
+          <div>{c > 9 ? <span>获得称号</span> : ''}</div>
+        </div>
+      )
+    }
+    rootRender()
+  </script>
+</body>
+
+</html>

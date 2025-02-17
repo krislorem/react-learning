@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hello React</title>
+  <style>
+    .item {
+      margin: 10px;
+      padding: 0 20px;
+      border: 1px solid orange;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="root"></div>
+  <!-- CDN引入，依赖三个包：react、react-dom、babel -->
+  <script src="./lib/react.js"></script>
+  <script src="./lib/react-dom.js"></script>
+  <script src="./lib/babel.js"></script>
+
+  <script type="text/babel">
+    const taskList = [
+      {
+        id: 1,
+        name: "吃饭",
+        completed: true,
+      },
+      {
+        id: 2,
+        name: "睡觉",
+        completed: false,
+      },
+      {
+        id: 3,
+        name: "敲代码",
+        completed: false,
+      },
+    ];
+    const unfinished = taskList.filter((task) => !task.completed).length
+    const element = (
+      <div>
+        <h2>当前未完成任务数: {unfinished}</h2>
+        {taskList.map((task) => {
+          return (
+            <div key={task.id}>
+              <span style={{ color: task.completed ? "green" : "red" }}>
+                {task.name}
+              </span></div>
+          )
+        })}
+      </div>
+    )
+
+    const root = ReactDOM.createRoot(document.querySelector("#root"));
+    root.render(element);
+  </script>
+</body>
+
+</html>
