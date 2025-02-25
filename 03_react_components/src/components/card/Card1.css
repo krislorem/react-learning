@@ -1,0 +1,33 @@
+/* Card.css */
+.custom-card {
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+}
+
+.custom-card:hover {
+  transform: translateY(-4px);
+}
+
+.card-header {
+  padding: 16px 24px;
+  border-bottom: 1px solid #f0f0f0;
+  font-size: 18px;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.85);
+}
+
+.card-body {
+  padding: 24px;
+  min-height: 120px;
+  color: rgba(0, 0, 0, 0.65);
+  line-height: 1.6;
+}
+
+.card-footer {
+  padding: 16px 24px;
+  border-top: 1px solid #f0f0f0;
+  display: flex;
+  gap: 12px;
+  justify-content: flex-end;
+}

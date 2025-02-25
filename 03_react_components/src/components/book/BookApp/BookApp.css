@@ -1,0 +1,16 @@
+.book-app {
+  min-height: 100%;
+  background: #f0f2f5;
+}
+
+.content {
+  margin-top: 64px;
+  padding: 24px 50px;
+}
+
+/* 响应式布局 */
+@media (max-width: 768px) {
+  .content {
+    padding: 24px 12px;
+  }
+}

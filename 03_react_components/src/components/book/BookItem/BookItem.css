@@ -1,0 +1,13 @@
+.book-item-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.book-item-actions button {
+  color: rgba(0, 0, 0, 0.65);
+  transition: color 0.3s;
+}
+
+.book-item-actions button:hover {
+  color: #1890ff;
+}
