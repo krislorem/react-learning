@@ -1,0 +1,43 @@
+nav {
+  display: flex;
+  justify-content: center;
+  padding: 15px;
+  gap: 20px;
+}
+
+a{
+  padding: 5px;
+  text-decoration: none;
+}
+
+NavLink {
+  color: white;
+  padding: 8px 15px;
+  border-radius: 4px;
+  transition: all 0.3s;
+}
+
+NavLink:hover {
+  background: #555;
+}
+
+.active {
+  background: lightblue;
+  font-weight: bold;
+}
+div {
+  text-align: center;
+}
+
+.nav-colum{
+  background: aqua;
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+}
+
+.content{
+  height: 400px;
+  background: #ffc;
+  display: flex;
+}

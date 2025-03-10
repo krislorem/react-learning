@@ -1,0 +1,35 @@
+.not-found-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #001529 0%, #030852 100%);
+  padding: 40px 20px;
+}
+
+.ant-result-icon {
+  font-size: 120px !important;
+}
+
+.reason-list {
+  margin: 16px 0;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.reason-list li {
+  margin: 12px 0;
+  padding-left: 8px;
+  border-left: 3px solid #1890ff;
+}
+
+.ant-result-title, .ant-result-subtitle {
+  color: rgba(255, 255, 255, 0.85) !important;
+}
+
+.ant-btn-primary {
+  background: #1890ff;
+  border-color: #1890ff;
+  transition: all 0.3s;
+}
+
+.ant-btn-primary:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(24, 144, 255, 0.4);
+}

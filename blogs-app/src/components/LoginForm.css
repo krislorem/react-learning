@@ -1,0 +1,24 @@
+.login-container {
+  background: url('login-bg.jpg') no-repeat center center fixed;
+  background-size: cover;
+}
+
+.login-form-wrapper {
+  padding: 40px;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 8px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.login-form-forgot {
+  float: right;
+}
+
+.login-form-button {
+  margin-top: 10px;
+}
+
+.additional-actions {
+  text-align: center;
+  margin-top: 20px;
+}
