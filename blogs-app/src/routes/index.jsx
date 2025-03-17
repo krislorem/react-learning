@@ -5,10 +5,9 @@ import LoginForm from '../components/LoginForm';
 import NotFound from '../pages/NotFound';
 import Blog from '../components/Blog';
 import BlogsList from '../components/BlogsList';
-import DashBoard from '../pages/DashBoard';
 import About from '../pages/About';
 import RouterV7 from '../pages/RouterV7';
-
+import BlogManagement from '../pages/BlogManagement';
 const AppRoutes = () => {
   return (
     <Routes>
@@ -22,8 +21,8 @@ const AppRoutes = () => {
           <Route path="/blogs" element={<BlogsList />} />
           <Route path="/:userid/:id" element={<Blog />} />
           <Route path="/about" element={<About />} />
-          <Route path="/dashboard" element={<DashBoard />} />
           <Route path="/routerv7" element={<RouterV7 />} />
+          <Route path="/addblog" element={<BlogManagement />} />
         </Route>
       </Route>
 

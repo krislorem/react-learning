@@ -22,6 +22,7 @@ const CherryEditor = ({ initialValue, isPreview }) => {
         }
       },
       externals: {
+        echarts: window.echarts, // 显式挂载全局变量
         mermaid: {
           theme: 'dark'  // mermaid主题配置
         }
@@ -32,16 +33,30 @@ const CherryEditor = ({ initialValue, isPreview }) => {
       }
     };
 
-    // 单例模式初始化（网页5性能建议）
+    // 单例模式初始化
     if (!editorInstance.current) {
       editorInstance.current = new Cherry(config);
     }
 
-    // 值更新处理（网页3局部更新特性）
+    // 值更新处理
     const handleValueChange = () => {
-      if (editorInstance.current.getValue() !== initialValue) {
-        editorInstance.current.setValue(initialValue);
+      // 空值保护处理
+      const currentValue = editorInstance.current?.getValue() || '';
+      const incomingValue = initialValue || '';
+
+      if (currentValue !== incomingValue) {
+        try {
+          editorInstance.current.setValue(incomingValue.split('\n').join('\n'));
+        } catch (e) {
+          console.error('Value update failed:', e);
+        }
       }
+    };
+
+    // 设置默认值
+    CherryEditor.defaultProps = {
+      initialValue: '',
+      isPreview: false
     };
     handleValueChange();
 

@@ -1,25 +1,18 @@
 import { Dropdown, Menu, Avatar, Button, message } from 'antd';
 import { Link, useLocation, useNavigate } from 'react-router';
 import { useLogin } from '../hooks/useLogin';
-import { blogs } from '../data/blogs';
+import { useUser } from '../hooks/useUser';
 import {
   UserOutlined,
   LogoutOutlined,
   HomeOutlined,
   SettingOutlined
 } from '@ant-design/icons';
-
 const NavBar = () => {
   const navigate = useNavigate();
   const { pathname } = useLocation();
-  const { token, isLoggedIn, logout } = useLogin();
-
-  // 获取用户信息
-  const getUserInfo = () => {
-    const [email] = token?.split('|') || [];
-    return blogs.find(u => u.author.email === email)?.author || {};
-  };
-
+  const { isLoggedIn, logout } = useLogin();
+  const { getUserInfo } = useUser();
   // 登出处理
   const handleLogout = () => {
     logout();
@@ -81,8 +74,8 @@ const NavBar = () => {
           items={[
             { label: <Link to="/">首页</Link>, key: '/' },
             { label: <Link to="/about">关于</Link>, key: '/about' },
-            { label: <Link to="/dashboard">控制台</Link>, key: '/dashboard' },
-            { label: <Link to="/routerv7">组件库</Link>, key: '/routerv7' }
+            { label: <Link to="/routerv7">组件库</Link>, key: '/routerv7' },
+            { label: <Link to="/addblog">创建Blog</Link>, key: '/addblog' }
           ]}
         />
 
