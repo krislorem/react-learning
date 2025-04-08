@@ -1,0 +1,16 @@
+{
+  "miniprogramRoot": "./dist",
+  "cloudfunctionRoot": "src/cloud",
+  "projectname": "09_taro_basic",
+  "description": "taro basic",
+  "appid": "wxa0f372a54ede7d8b",
+  "setting": {
+    "urlCheck": true,
+    "es6": false,
+    "enhance": false,
+    "compileHotReLoad": false,
+    "postcss": false,
+    "minified": false
+  },
+  "compileType": "miniprogram"
+}

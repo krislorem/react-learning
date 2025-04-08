@@ -1,0 +1,35 @@
+.account-book {
+  padding: 20px;
+
+  .at-card {
+    margin-top: 20px;
+  }
+
+  .at-input {
+    margin-bottom: 15px;
+  }
+
+  .at-button {
+    margin-top: 30px;
+  }
+}
+
+.timeline-area {
+  margin-top: 20px;
+
+  .at-timeline {
+    padding: 0 15px;
+
+    &__item {
+      &-content {
+        font-size: 14px;
+        color: #666;
+        white-space: pre-wrap;
+      }
+      &-time {
+        font-size: 12px;
+        color: #999;
+      }
+    }
+  }
+}
