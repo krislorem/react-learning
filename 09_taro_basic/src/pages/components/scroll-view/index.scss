@@ -1,0 +1,23 @@
+.item {
+  height: 88px;
+  margin: 10px 20px;
+  padding: 16px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  display: flex;
+  align-items: center;
+
+  & + .item {
+    margin-top: 12px;
+  }
+}
+
+.loading {
+  height: 48px;
+  line-height: 48px;
+  text-align: center;
+  color: #666;
+  font-size: 14px;
+  background: #f5f5f5;
+}

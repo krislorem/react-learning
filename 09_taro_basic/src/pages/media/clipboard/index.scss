@@ -1,0 +1,36 @@
+.container {
+  padding: 20px;
+  background: #f5f5f5;
+
+  .section {
+    margin-bottom: 30px;
+    padding: 15px;
+    background: white;
+    border-radius: 8px;
+  }
+
+  .input {
+    margin: 10px 0;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+
+  .btn {
+    margin: 15px 0;
+    padding: 12px;
+    background: #07c160;
+    color: white;
+    border-radius: 4px;
+
+    &:active {
+      opacity: 0.8;
+    }
+  }
+
+  .content {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #666;
+  }
+}

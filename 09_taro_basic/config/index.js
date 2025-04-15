@@ -28,6 +28,15 @@ export default defineConfig(async (merge, { command, mode }) => {
     },
     framework: 'react',
     compiler: 'vite',
+    compilerOptions: {
+      skyline: true,
+      renderer: 'skyline',
+      rendererOptions: {
+        skyline: {
+          defaultDisplayBlock: true,
+        }
+      },
+    },
     mini: {
       postcss: {
         pxtransform: {
